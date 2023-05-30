@@ -1,0 +1,1938 @@
+/* Small Reset */
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root for CSS Variables */
+:root {
+    /* --main-pr1-color: #b0b9b5;  */
+    --main-pr1-color: #bbc7d6;
+    --main-pr2-color: #dbd6d1;
+    --main-pr3-color: #ffe08d;
+    --main-pr4-color: #e6d1ba;
+}
+
+
+/* font-family: alibaba-sans,sans-serif; 
+font-weight: 300;
+font-style: normal;
+
+font-family: alibaba-sans,sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: alibaba-sans, sans-serif;
+font-weight: 500;
+font-style: normal; 
+
+font-family: alibaba-sans, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: alibaba-sans, sans-serif;
+font-weight: 800;
+font-style: normal;*/
+
+
+
+
+/* um Elemente im JS zu verstecken  */
+.hidden {
+    display: none;
+}
+
+
+/* ------INHALTSVERZEICHNIS---------------------------------------------
+01. STYLE FÜR HOMEPAGE
+02. STYLE FÜR PROJEKTÜBERSICHT SLIDER
+03. STYLE FÜR TITELN
+    03.1    MEHR ERFAHREN BUTTON
+    03.2    ZURÜCK ZUR PROJEKTÜBERSICHT BUTTON
+    03.3    SCHLIESSEN BUTTON
+04. STYLEN DER UNTERSEITEN
+    04.1    STYLE FÜR UNTERSEITEN GEMEINSAME ELEMENTE
+
+    04.2    STYLE FÜR UNTERSEITE VIER PFOTEN UND EIN STETHOSKOP
+        04.21   PARALLAX EFFEKT VIER PFOTEN UND EIN STETHOSKOP
+
+    04.3    STYLE FÜR UNTERSEITE UNDERSKINNED
+        04.31   PARALLAX EFFEKT UNDERSKINNED
+
+    04.4    STYLE FÜR UNTERSEITE JUMPSUIT
+         04.41   PARALLAX EFFEKT JUMPSUIT
+
+    04.5    STYLE FÜR UNTERSEITE VITRA
+        04.51   PARALLAX EFFEKT VITRA
+05. NEXT-PROJECT-CONTAINER AUF DEN PROJEKTSEITEN
+    05.1    GEMEINSAME ELEMENTE
+    05.2    JUMPSUIT STYLE ELEMENTE
+    05.3    VIER PFOTEN UND EIN STETHOSKOP STYLE ELEMENTE
+    05.4    UNDERSKINNED STYLE ELEMENTE
+    05.5    VITRA STYLE ELEMENTE
+
+06. STYLE FÜR UNTERSEITE MIT ALLEN BILDERN
+    06.1    VIER PFOTEN UND EIN STETHOSKOP GALLERIE
+    06.2    UNDERSKINNED GALLERIE
+    06.3    JUMPSUIT GALLERIE
+    06.4    VITRA GALLERIE
+    06.5    LIGHTBOX
+07. KONTAKTFORMULAR
+    07.1    FEHLER NACHRICHT FÜR USER
+08. NAVIGATIONS
+09. BURGER MENU
+10. RESPONSIVE LAYOUT
+    10.1    MEDIA QUERY MAX-WIDTH 1200PX
+    10.2    MEDIA QUERY MAX-WIDTH 850PX
+    10.3    MEDIA QUERY MAX-WIDTH 600PX
+    10.4    MEDIA QUERY MAX-WIDTH 500PX
+    10.5    MEDIA QUERY MAX-WIDTH 400PX
+-----------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* 01 STYLE FÜR HOMEPAGE.................................................................................................................................. */
+#homepage-body {
+    overflow-x: hidden;
+}
+#homepage-body header {
+    background: -webkit-gradient(linear,  right top, left top,  from(#bac8cc), to(white));
+    background: linear-gradient(to left,  #bac8cc, white);
+}
+.heropicture-container {
+    height: 100vh;
+    width: 70vw;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+}
+.heropicture-container h1 {
+    font-family: alibaba-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+
+    font-size: 7rem;
+    color: #45537F;
+    z-index: 1;
+}
+
+.heropicture {
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.home-pic1 {height: 600px; position: relative;}
+.home-pic2 {height: 700px; position: relative;}
+.home-pic4 {height: 1200px; position: relative; top: 30rem;}
+.home-pic6 {height: 1400px; position: relative;}
+
+.homepage-content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.homepage-first-section {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start;
+
+    margin-top: 30rem;
+}
+.homepage-second-section {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    margin-top: 30rem;
+}
+
+.text-über-mich {
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 30rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    padding: 1rem;
+}
+.text-fotografie {
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 35rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    padding: 1rem;
+
+}
+
+footer {
+    z-index: -1;
+    background: -webkit-gradient(linear,  left bottom, left top,  from(#6a8993), to(white));
+    background: linear-gradient(to top,  #6a8993, white);
+    height: 72vh;
+    width: 100vw;
+
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+
+    display: -webkit-box;
+
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+.footer-content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+
+    padding-top: 15rem;
+}
+footer .icons i {
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.footer-text {
+    text-align: center;
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+
+
+
+/* 02 STYLE FÜR PROJEKTÜBERSICHT SLIDER..................................................................................................................... */
+.slider-container {
+    position: absolute;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slideshow {
+    height: 70vh;
+    width: 30vw;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center;    
+}
+.slideshow ul {
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    width: 133.5%;
+    height: auto;
+}
+.slide {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    font-size: 4rem;
+    color: rgb(47, 47, 47);
+    height: 70vh;
+    width: 25vw;
+}
+
+.slide img {
+    width: 25vw;
+    position: relative;
+}
+
+.hover:hover {
+    opacity: 85%;
+    cursor: pointer;
+}
+
+
+.left, .right {
+    font-size: 3rem;
+    position: relative;
+    color: black;
+    opacity: 30%;
+    z-index: 1;
+}
+
+
+
+
+.autoplay {
+    position: relative;
+    z-index: 10;
+    left: 50%;
+    top: 25vw;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding: 0.4rem;
+    color: #404040;
+    border-radius: 5px 5px 0 0;
+
+    font-family: alibaba-sans,sans-serif; 
+    font-weight: 300;
+    font-style: normal;
+}
+
+.autoplay:hover {
+    cursor: pointer;
+}
+
+
+/* 03 STYLE VON TITELN................................................................................................................... */
+
+.title {
+    position: absolute;
+    z-index: 900;
+    font-family: alibaba-sans, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 9vw;
+
+    width: 67vw;
+    text-align: justify;
+    line-height: 17vw;
+    letter-spacing: 1.8vw;
+
+    -webkit-animation-name: title-animation;
+
+            animation-name: title-animation;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+.title-2 {
+    width: 45vw;
+    text-align: justify;
+    line-height: 34vw;
+
+    -webkit-animation-name: title-animation-2;
+
+            animation-name: title-animation-2;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s; 
+}
+.title-3 {
+    width: 35vw;
+    text-align: center;
+    line-height: 34vw;
+    -webkit-animation-name: title-animation-3;
+            animation-name: title-animation-3;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;   
+}
+.title-4 {
+    width: 37vw;
+    letter-spacing: 5rem;
+    -webkit-animation-name: title-animation-4;
+            animation-name: title-animation-4;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+@-webkit-keyframes title-animation {
+    0% {opacity: 0; left: 22%;}
+    100% {opacity: 100%; left: 12.5%;}
+}
+
+@keyframes title-animation {
+    0% {opacity: 0; left: 22%;}
+    100% {opacity: 100%; left: 12.5%;}
+} 
+@-webkit-keyframes title-animation-2 {
+    0% {opacity: 0; left: 30%;}
+    100% {opacity: 100%; left: 20.7%;}
+} 
+@keyframes title-animation-2 {
+    0% {opacity: 0; left: 30%;}
+    100% {opacity: 100%; left: 20.7%;}
+}
+@-webkit-keyframes title-animation-3 {
+    0% {opacity: 0; left: 34%;}
+    100% {opacity: 100%; left: 24.5%;} 
+}
+@keyframes title-animation-3 {
+    0% {opacity: 0; left: 34%;}
+    100% {opacity: 100%; left: 24.5%;} 
+}
+@-webkit-keyframes title-animation-4 {
+    0% {opacity: 0; left: 34%;}
+    100% {opacity: 100%; left: 23.7%;} 
+}
+@keyframes title-animation-4 {
+    0% {opacity: 0; left: 34%;}
+    100% {opacity: 100%; left: 23.7%;} 
+}
+
+
+
+
+/* 03.1 Mehr erfahren Button................... */
+
+.info {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+
+    z-index: 2000;
+}
+
+.info a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    font-family: alibaba-sans,sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+.info-arrow {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    font-size: 1.6rem;
+    color: #505050;
+}
+
+.info:hover {
+    bottom: -1vh;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+
+
+
+/* 03.2 zurück zur projektübersicht Button */
+.info-back {
+    bottom: 1vh;
+}
+.info-arrow-back {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 1.6rem;
+    color: white;
+}
+
+
+.info-back:hover {
+    bottom: 2vh;
+}
+
+
+/* 03.3 Schliessen Button................... */
+.close-cover {
+    position: absolute;
+    top: 6%;
+    right: 20%;
+    opacity: 80%;
+    z-index: 1000;
+    
+    font-size: 5rem;
+    border-radius: 100rem;
+}
+.close-cover:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* 04 STYLEN DER UNTERSEITEN */
+/* 04.1 STYLEN DER UNTERSEITEN GEMEINSAME ELEMENTE..................................................................................................................... */
+.white .logo a{
+    text-decoration: none;
+    color: white;
+}
+.white ul a{
+    color: white;
+}
+.dark ul li a {
+    color: #404040;
+}
+.dark ul a{
+    color: #404040;
+}
+.cover {
+    min-height: 91vh; 
+    display: -webkit-box; 
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+}
+.cover-title {
+    position: absolute;
+    z-index: 0;
+    font-family: alibaba-sans, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 9vw;
+    color: white;
+}
+
+
+/* 04.2 STYLE FÜR UNTERSEITE VIER PFOTEN UND EIN STETHOSKOP..................................................................................................................... */
+#body-vier-pfoten {
+    background: var(--main-pr1-color);
+    color: white;
+}
+.background-pic {
+    height: 100vh;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.title-vier-pfoten {
+    width: 67vw;
+    text-align: justify;
+    line-height: 17vw;
+    letter-spacing: 1.8vw;
+
+    -webkit-animation-name: title-movement;
+
+            animation-name: title-movement;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+} 
+.picture-container-vier-pfoten {
+    height: 340vw;
+}
+@-webkit-keyframes title-movement {
+    0% {left: 16.5%; letter-spacing: 1.8vw; width: 67vw; opacity: 100%;}
+    100% {left: 2%; letter-spacing: 0; width: 48vw; opacity: 60%;}
+}
+@keyframes title-movement {
+    0% {left: 16.5%; letter-spacing: 1.8vw; width: 67vw; opacity: 100%;}
+    100% {left: 2%; letter-spacing: 0; width: 48vw; opacity: 60%;}
+}
+
+/*-----------04.21 PARALLAX EFFEKT VIER PFOTEN UND EIN STETHOSKOP-------------*/
+.item-1-a {width: 30vw; position: relative; top: 27vw; left: 10vw; z-index: 9;}
+.item-1-b {width: 30vw; position: relative; top: 2vw; left: 25vw;}
+.item-1-c {width: 30vw; position: relative; top: 26vw; left: -45vw;  z-index: 6;}
+.item-1-d {width: 40vw; position: relative; top: 64vw; left: 50vw; z-index: 7;}
+.item-1-e {width: 35vw; position: relative; top: 100vw; left: 10vw; z-index: 11;}
+.item-1-f {width: 30vw; position: relative; top: -10vw; left: 10vw; z-index: 3;}
+
+
+
+
+
+/* 04.3 STYLE FÜR UNTERSEITE UNDERSKINNED..................................................................................................................... */
+#body-underskinned {
+    background: var(--main-pr2-color);
+    color: white;
+}
+.title-underskinned {
+    width: 45vw;
+    text-align: justify;
+    line-height: 34vw;
+    letter-spacing: 1.8vw;
+
+    -webkit-animation-name: title-movement-2;
+
+            animation-name: title-movement-2;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.picture-container-underskinned {
+    height: 300vw;
+}
+
+@-webkit-keyframes title-movement-2 {
+    0% {left: 30%; letter-spacing: 1.8vw; width: 45vw; opacity: 100%; }
+    100% {left: 2%; letter-spacing: 0; width: 34vw; opacity: 60%; }
+}
+
+@keyframes title-movement-2 {
+    0% {left: 30%; letter-spacing: 1.8vw; width: 45vw; opacity: 100%; }
+    100% {left: 2%; letter-spacing: 0; width: 34vw; opacity: 60%; }
+}
+
+/*-----------04.31 PARALLAX EFFEKT UNDERSKINNED-----------*/
+
+.item-2-a {width: 30vw; position: relative; top: 7vw; left: 10vw;}
+.item-2-b {width: 35vw; position: relative; top: 67vw; left: 16vw; z-index: 15;}
+.item-2-c {width: 30vw; position: relative; top: 15vw; left: -60vw;}
+.item-2-d {width: 50vw; position: relative; top: 45vw; left: 34vw; z-index: 5;}
+.item-2-e {width: 30vw; position: relative; top: 15vw; left: 0vw;}
+.item-2-f {width: 30vw; position: relative; top: -45vw; left: 10vw;}
+
+
+
+
+
+/* 04.4 STYLE FÜR UNTERSEITE JUMPSUIT..................................................................................................................... */
+.title-jumpsuit {
+    width: 35vw;
+    text-align: center;
+    line-height: 34vw;
+    letter-spacing: 1.8vw;
+    color: #404040; 
+
+    -webkit-animation-name: title-movement-3; 
+
+            animation-name: title-movement-3;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.picture-container-jumpsuit {
+    height: 530vw;
+}
+@-webkit-keyframes title-movement-3 {
+    0% {left: 30%; letter-spacing: 1.8vw; width: 35vw; opacity: 100%; }
+    100% {left: 2%; letter-spacing: 0; width: 20vw; opacity: 90%; }
+}
+@keyframes title-movement-3 {
+    0% {left: 30%; letter-spacing: 1.8vw; width: 35vw; opacity: 100%; }
+    100% {left: 2%; letter-spacing: 0; width: 20vw; opacity: 90%; }
+}
+
+.info-3 a, .info-3 .info-arrow-back {
+    color: #404040;
+}
+/*-----------04.41 PARALLAX EFFEKT JUMPSUIT-----------*/
+
+.item-3-a {width: 20vw; position: relative; top: -15vw; left: 22vw; z-index: 10;}
+.item-3-b {width: 30vw; position: relative; top: 7vw; left: 30vw; z-index: 14;}
+.item-3-c {width: 30vw; position: relative; top: 39vw; left: -40vw; z-index: 14;}
+.item-3-e {width: 20vw; position: relative; top: 8vw; left: 75vw; z-index: 10;}
+
+.item-3-f {width: 20vw; position: relative; top: 51vw; left:-10vw; z-index: 10;}
+.item-3-g {width: 25vw; position: relative; top: 51vw; left: -3vw; z-index: 13;}
+.item-3-i {width: 20vw; position: relative; top: 48vw; left: 4vw; z-index: 10;}
+
+.item-3-h {width: 40vw; position: relative; top: -10vw; left: 30vw; z-index: 15;}
+.item-3-j {width: 30vw; position: relative; top: 55vw; left: 20vw; z-index: 14;}
+
+.item-3-l {width: 30vw; position: relative; top: 37vw; left: 22vw; z-index: 14;}
+.item-3-m {width: 50vw; position: relative; top: 130vw; left: -25vw; z-index: 16;}
+
+.item-3-n {width: 23vw; position: relative; top: 160vw; left: 13vw; z-index: 11;}
+.item-3-o {width: 23vw; position: relative; top: 160vw; left: 17vw; z-index: 11;}
+.item-3-k {width: 23vw; position: relative; top: 160vw; left: 22vw; z-index: 11;}
+
+
+.item-3-q {width: 23vw; position: relative; top: 200vw; left: -57vw; z-index: 11;}
+.item-3-p {width: 23vw; position: relative; top: 145vw; left: 40vw; z-index: 11;}
+.item-3-r {width: 23vw; position: relative; top: 164vw; left: 45vw; z-index: 11;}
+.item-3-t {width: 23vw; position: relative; top: 165vw; left: -6vw; z-index: 11;}
+
+.item-3-s {width: 45vw; position: relative; top: 30vw; left: 54vw; z-index: 16;}
+
+
+
+
+
+/* 04.5 STYLE FÜR UNTERSEITE VITRA..................................................................................................................... */
+#body-vitra {
+    background: var(--main-pr4-color);
+}
+.title-vitra {
+    width: 37vw;
+    letter-spacing: 4vw;
+
+    -webkit-animation-name: title-movement-4;
+
+            animation-name: title-movement-4;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.picture-container-vitra {
+    height: 260vw;
+}
+@-webkit-keyframes title-movement-4 {
+    0% {left: 30%; letter-spacing: 4vw; width: 37vw; opacity: 100%; }
+    100% {left: 2%; letter-spacing: 0; width: 20vw; opacity: 60%; }
+}
+@keyframes title-movement-4 {
+    0% {left: 30%; letter-spacing: 4vw; width: 37vw; opacity: 100%; }
+    100% {left: 2%; letter-spacing: 0; width: 20vw; opacity: 60%; }
+}
+
+/*-----------04.51 PARALLAX EFFEKT VITRA-----------*/
+
+.item-4-a {width: 28vw; position: relative; top: 13vh; left: 50vw;}
+.item-4-b {width: 25vw; position: relative; top: 2vw; left: -5vw;}
+
+.item-4-e {width: 70vw; position: relative; top: 20vw; left: 15vw; z-index: 11;}
+
+.item-4-d {width: 25vw; position: relative; top: 30vw; left: -50vw;}
+.item-4-c {width: 30vw; position: relative; top: 40vw; left: 50vw;}
+
+.item-4-f {width: 25vw; position: relative; top: 50vw; left: -15vw;}
+.item-4-g {width: 50vw; position: relative; top: 50vw; left: 42vw;}
+
+
+
+/* 05. NEXT-PROJECT-CONTAINER AUF DEN PROJEKTSEITEN */
+/* 05.1 gemeinsame Elemente */
+.bottom-container {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    background-color: white;
+}
+.bottom-nav-container {
+    height: 10vh;
+    width: 100vw;
+}
+.next-project {
+    width: 100vw;
+    height: 90vh;
+
+    font-size: 8vw;
+    color: #404040;
+    z-index: 100;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.next-project-arrow-container {
+    height: 20vh;
+    width: 15vw;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+
+    border: 1px solid #404040;
+    border-radius: 100%;
+}
+.click-here {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+}
+.next-project-arrow {
+    font-size: 12vw;
+    text-decoration: none;
+    color: #404040;
+}
+small {
+    font-size: 1rem;
+}
+.next-project p {
+    width: 30vw;
+    margin: 3rem;
+}
+.next-project-arrow:hover {
+    cursor: pointer;
+    color: black;
+}
+/* 05.2 jumpsuit Style Elemente */
+#body-jumpsuit .bottom-container {
+    background-color: #404040;
+}
+#body-jumpsuit .next-project {
+    color: white;
+}
+#body-jumpsuit .next-project-arrow {
+    color: white;
+}
+#body-jumpsuit .next-project-arrow-container {
+    border: 1px solid white;
+    border-radius: 100%;
+}
+#body-jumpsuit .next-project-arrow:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.614);
+}
+#body-jumpsuit .bottom-nav-container {
+    background-color: white;
+}
+/* 05.3 vier pfoten und ein stethoskop Style Elemente */
+#body-vier-pfoten .bottom-nav-container {
+    background-color: var(--main-pr1-color);
+}
+/* 05.4 underskinned Style Elemente */
+#body-underskinned .bottom-nav-container {
+    background-color: var(--main-pr2-color);
+}
+/* 05.5 vitra Style Elemente */
+#body-vitra .bottom-nav-container {
+    background-color: var(--main-pr4-color);
+}
+
+
+
+
+
+/* 06 STYLE FÜR UNTERSEITE MIT ALLEN BILDERN.....................................................................................................................*/
+#body-alle-bilder {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+}
+.alleBilder-container {
+    width: 90vw;
+}
+.alleBilder-container img{
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 100%;
+    
+}
+.alleBilder-container img:hover { 
+    opacity: 70%;
+}
+
+
+/* 06.1 vier pfoten und ein stethoskop galleie */
+.gallery-pr-one {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
+    row-gap: 1rem;  
+}
+.glry-pic1{grid-area: 1/1/2/4;}
+.glry-pic2{grid-area: 1/4/2/9;}
+.glry-pic3{grid-area: 2/1/3/6;}
+.glry-pic4{grid-area: 2/6/3/9;}
+.glry-pic5{grid-area: 3/1/4/3; -o-object-position: 80%; object-position: 80%;}
+.glry-pic6{grid-area: 3/3/4/6;}
+.glry-pic7{grid-area: 3/6/4/9;}
+
+
+/* 06.2 underskinned gallerie */
+.gallery-pr-two {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    margin-top: 5rem;
+
+    -webkit-column-gap: 1rem;
+
+       -moz-column-gap: 1rem;
+
+            column-gap: 1rem;
+    row-gap: 1rem;
+}
+.glry-pic8{grid-area: 1/1/3/4;}
+.glry-pic9{grid-area: 1/4/2/9;}
+.glry-pic10{grid-area: 2/4/4/7;}
+.glry-pic11{grid-area: 5/1/7/4;}
+.glry-pic12{grid-area: 4/4/7/9;}
+.glry-pic13{grid-area: 2/7/4/9;}
+.glry-pic14{grid-area: 3/1/5/4;}
+
+
+/* 06.3 jumpsuit gallerie */
+.gallery-pr-three {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    margin-top: 5rem;
+
+    -webkit-column-gap: 1rem;
+
+       -moz-column-gap: 1rem;
+
+            column-gap: 1rem;
+    row-gap: 1rem;
+}
+.glry-pic15{grid-area: 1/1/3/3;}
+.glry-pic19{grid-area: 1/5/3/7;}
+.glry-pic24{grid-area: 2/7/4/9;}
+.glry-pic26{grid-area: 4/7/5/9;}
+.glry-pic27{grid-area: 3/4/5/7;}
+.glry-pic29{grid-area: 5/2/7/4;}
+.glry-pic30{grid-area: 5/4/7/8;}
+.glry-pic32{grid-area: 3/1/5/3;}
+
+
+/* 06.4 vitra gallerie */
+.gallery-pr-four {
+    display: grid;  
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    margin-top: 5rem;
+
+    -webkit-column-gap: 1rem;
+
+       -moz-column-gap: 1rem;
+
+            column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.glry-pic35{grid-area: 1/1/4/4;}
+.glry-pic36{grid-area: 1/4/3/6;}
+.glry-pic37{grid-area: 4/1/5/4;}
+.glry-pic38{grid-area: 1/6/4/9;}
+.glry-pic39{grid-area: 4/6/6/9;}
+.glry-pic40{grid-area: 5/4/6/6;}
+.glry-pic41{grid-area: 3/4/5/6;}
+.glry-pic42{grid-area: 5/1/7/4;}
+
+
+/* 06.5 lightbox */
+.lightbox {
+    background: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    
+    display: -webkit-box;
+    
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.lightbox img {
+    max-height: 70vh;
+}
+.close-lightbox {
+    color: #404040;
+    font-size: 4rem;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+.close-lightbox:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+/* 07 KONTAKTFORMULAR */
+.contact {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+
+    background-image: url(Pictures/homepage/Jeanne_Shooting_basic_0800.png);
+    background-size: 180vh;
+    background-position: 50% 44%;
+    background-repeat: no-repeat; 
+}
+form {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    height: 100vh;
+    width: 70rem;
+    gap: 6%;
+
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 400;
+}
+
+.input-fields {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    height: 60vh;
+}
+
+.input-box {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    height: 60vh;
+}
+.radio-buttons {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    gap: 20%;
+    width: 22rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+#first-name, #last-name, #email, #phone, #theme {
+    width: 100%;
+    height: 3.5rem;
+}
+
+#message, #checkbox {
+    width: 100%; 
+}
+
+#checkbox {
+    padding: 1rem;
+    color: rgb(23, 23, 23);
+    background-color: rgba(255, 255, 255, 0.799);
+    box-shadow: rgba(0, 0, 0, 0.543) 0px 0px 50px;
+}
+
+input, #theme, #message{
+    padding: 0 1rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.543) 0px 0px 50px;
+
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    background-color: rgba(255, 255, 255, 0.799);
+    color: rgb(0, 0, 0);
+}
+
+input {
+    margin: 1.5rem 0;
+}
+
+#message {
+    padding-top: 2rem;
+    margin: 1.5rem 0;
+}
+button {
+    box-shadow: rgba(0, 0, 0, 0.543) 0px 0px 50px;
+
+    margin-bottom: 2rem;
+    background-color: var(--main-pr1-color);
+    height: 8rem;
+    width: 10rem;
+    border-radius: 30px;
+    color: rgb(40, 40, 40);
+    font-size: 1.4rem;
+    font-family: alibaba-sans,sans-serif;
+    font-weight: 400;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+}
+
+::-moz-placeholder {
+    color: rgb(0, 0, 0);
+}
+
+:-ms-input-placeholder {
+    color: rgb(0, 0, 0);
+}
+
+::-ms-input-placeholder {
+    color: rgb(0, 0, 0);
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+/* 07.1 fehler Nachricht für User */
+.errorMessages {
+    font-size: 1.1rem;
+    color: rgb(255, 0, 0);
+    margin-top: -20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 08 NAVIGATIONS .................................................................................... */
+
+.main-navigation {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    width: 100vw;
+    height: 5.7rem;
+    position: fixed;
+    z-index: 20000;
+}
+
+.main-navigation ul {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    list-style: none;
+
+}
+.main-navigation a {
+    text-decoration: none;
+    color: #484848;
+    font-family: alibaba-sans, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    padding: 0 3rem;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 1.5vh;
+    z-index: 90000000;
+}
+.logo a{
+    font-size: 2.2rem;
+    letter-spacing: -0.1rem;
+}
+
+
+/* 09 BURGER MENU */
+.dropdown-menu {
+    position: fixed;
+    left: 0;
+    padding: 1rem 0 0 0;
+    width: 100vw;
+
+    display: -webkit-box;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.214) -10px 10px 30px;
+
+    z-index: 10000;
+
+    display: none;
+}
+
+.burger-menu {
+    height: 30px;
+    width: 40px;
+    gap: 20%;
+    margin: 1rem 1rem;
+    z-index: 9000;
+
+    display: -webkit-box;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+
+    display: none;
+}
+.burger-menu .line {
+    height: 15%;
+    width: 100%;
+    background-color: #404040;
+    border-radius: 5px;
+}
+.burger-menu-content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.763);
+    width: 100vw;
+}
+.burger-menu-content li {
+    width: 100vw;  
+    list-style: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: end;
+            align-items: flex-end;  
+    padding: 2rem 0;
+}
+.burger-menu-content a {
+    text-decoration: none;
+    color: #484848;
+    font-family: alibaba-sans, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    padding: 0 3rem;
+}
+.burger-menu-content li:hover {
+    background-color: rgba(0, 0, 0, 0.117);
+    cursor: pointer;
+}
+.burger-menu:hover {
+    cursor: pointer;
+}
+
+.white .burger-menu-content {
+    background-color: rgba(0, 0, 0, 0.068);
+}
+.white .burger-menu .line {
+    background-color: white;
+}
+.white .burger-menu-content a {
+    color: #ffffff;
+}
+
+
+.dark .burger-menu .line {
+    background-color: #404040;
+}
+.dark .burger-menu-content a {
+    color: #404040;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 10 RESPONSIVES LAYOUT */
+
+/* 10.1 media query max-width 1200px */
+@media (max-width: 1200px) {
+    /* NAVIGATION */
+    .main-navigation {
+        width: 60vw;
+    }
+    .main-navigation ul{
+        display: none;
+    }
+    .dropdown-menu {
+        display: -webkit-box;
+        display: flex;
+        min-height: 10vh;
+    }
+    .burger-menu {
+        display: -webkit-box;
+        display: flex;
+    }
+    /* HOMEPAGE */
+    .home-pic2, .home-pic6 {display: none;}
+    .home-pic1{ height: 400px; top: 25rem;}
+    .home-pic4 { height: 1000px;}
+    .homepage-first-section, .homepage-second-section {justify-content: space-around;}
+
+    /* PROJEKTSEITEN */
+    .picture-container-vier-pfoten {
+        height: 380vw;
+    }
+    .picture-container-underskinned {
+        height: 355vw;
+    }
+    .picture-container-vitra {
+        height: 280vw;
+    }
+
+
+    /* Jumpsuit Bildergallerie neue Anpassung */
+    .glry-pic15{grid-area: 1/1/3/3;}
+    .glry-pic16{grid-area: 1/7/3/9;}
+    .glry-pic17{grid-area: 1/3/3/5;}
+    .glry-pic18{grid-area: 1/5/3/7;}
+
+    .glry-pic19{grid-area: 3/1/5/3;}
+    .glry-pic20{grid-area: 3/3/7/7;}
+    .glry-pic21{grid-area: 3/7/5/9;}
+    .glry-pic22{grid-area: 5/1/7/3;}
+    .glry-pic23{grid-area: 5/7/7/9;}
+
+    .glry-pic24{grid-area: 7/-1/11/-5;}
+    .glry-pic25{grid-area: 7/4/11/5;}
+    .glry-pic26{grid-area: 7/1/9/4;}
+    .glry-pic27{grid-area: 9/1/11/4;}
+
+    .glry-pic28{grid-area: 11/1/12/3;}
+    .glry-pic29{grid-area: 11/7/12/9;}
+    .glry-pic30{grid-area: 11/3/12/7;}
+    
+    .glry-pic34{grid-area: 12/1/14/9;}
+    
+    .glry-pic31{grid-area: 14/1/15/4;}
+    .glry-pic32{grid-area: 14/4/15/6;}
+    .glry-pic33{grid-area: 14/6/15/9;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/* 10.2 media query max-width 850px */
+@media (max-width: 850px) {
+    /* NAVIGATION */
+    .dropdown-menu {
+        min-height: 10vh;
+    }
+    
+    /* HOMEPAGE */
+    .heropicture-container {
+        width: 70vw;
+    }
+    .heropicture-container h1 {
+        font-size: 5rem;
+        line-height: 20vh;
+    }
+    .heropicture {
+        opacity: 60%;
+    }
+    .home-pic1 {left: -10rem; top: 20rem;}
+    .home-pic4 { left: 12rem; top: 52rem;}
+    .text-fotografie, .text-über-mich {font-size: 1.2rem;}
+    .homepage-first-section {-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column; -webkit-box-align: center; align-items: center; margin-top: 10rem;}
+    .homepage-second-section{ -webkit-box-orient: vertical; -webkit-box-direction: reverse; flex-direction: column-reverse; -webkit-box-align: center; align-items: center; margin-top: -30rem; margin-bottom: 30rem;}
+    
+    /* SLIDER */
+    .slideshow {
+        width: 55vw;
+        height: 100vh;
+    }
+    .slideshow ul {
+        width: 400vw;
+    }
+    .slide img {
+        width: 50vw;
+    }
+    .autoplay {
+        top: 45vw;
+    }
+    .close-cover {
+        top: 15%;
+    }
+    .title { font-size: 13vw; line-height: 30vw;}
+    .title-1 { width: 88vw;}
+    .title-2 { width: 62vw; line-height: 60vw;}
+    .title-3 { line-height: 60vw; width: 40vw;}
+    .title-4 { left: 6.3%; letter-spacing: 3rem;}
+
+    @-webkit-keyframes title-animation {
+        0% {opacity: 0; left: 10%;}
+        100% {opacity: 100%; left: 1.5%;}
+    }
+
+    @keyframes title-animation {
+        0% {opacity: 0; left: 10%;}
+        100% {opacity: 100%; left: 1.5%;}
+    } 
+    @-webkit-keyframes title-animation-2 {
+        0% {opacity: 0; left: 14%;}
+        100% {opacity: 100%; left: 4.75%;}
+    } 
+    @keyframes title-animation-2 {
+        0% {opacity: 0; left: 14%;}
+        100% {opacity: 100%; left: 4.75%;}
+    }
+    @-webkit-keyframes title-animation-3 {
+        0% {opacity: 0; left: 18%;}
+        100% {opacity: 100%; left: 7.5%;}
+    }
+    @keyframes title-animation-3 {
+        0% {opacity: 0; left: 18%;}
+        100% {opacity: 100%; left: 7.5%;}
+    }
+    @-webkit-keyframes title-animation-4 {
+        0% {opacity: 0; left: 17%;}
+        100% {opacity: 100%; left: 6.3%;}
+    }
+    @keyframes title-animation-4 {
+        0% {opacity: 0; left: 17%;}
+        100% {opacity: 100%; left: 6.3%;}
+    }
+    
+    /* PROJEKTSEITEN */
+    .title-vier-pfoten {font-size: 13vw; line-height: 30vw;}
+    .title-underskinned {font-size: 13vw; line-height: 60vw;}
+    .title-jumpsuit {font-size: 13vw;line-height: 60vw; width: 40vw;}
+    .title-vitra {font-size: 13vw; left: 6.3%;}
+
+    @-webkit-keyframes title-movement {
+        0% {left: 8%; letter-spacing: 1.8vw; width: 90vw; opacity: 100%;}
+        100% {left: 2%; letter-spacing: 0; width: 70vw; opacity: 60%; line-height: 27vw;}
+    }
+
+    @keyframes title-movement {
+        0% {left: 8%; letter-spacing: 1.8vw; width: 90vw; opacity: 100%;}
+        100% {left: 2%; letter-spacing: 0; width: 70vw; opacity: 60%; line-height: 27vw;}
+    }
+    @-webkit-keyframes title-movement-2 {
+        0% {left: 22%; letter-spacing: 1.8vw; width: 60vw; opacity: 100%; }
+        100% {left: 2%; letter-spacing: 0; width: 52vw; opacity: 60%; }
+    }
+    @keyframes title-movement-2 {
+        0% {left: 22%; letter-spacing: 1.8vw; width: 60vw; opacity: 100%; }
+        100% {left: 2%; letter-spacing: 0; width: 52vw; opacity: 60%; }
+    }
+    @-webkit-keyframes title-movement-3 {
+        0% {left: 33%; letter-spacing: 1.8vw; width: 40vw; opacity: 100%; }
+        100% {left: 2%; letter-spacing: 0; width: 20vw; opacity: 90%; }
+    }
+    @keyframes title-movement-3 {
+        0% {left: 33%; letter-spacing: 1.8vw; width: 40vw; opacity: 100%; }
+        100% {left: 2%; letter-spacing: 0; width: 20vw; opacity: 90%; }
+    }
+    .picture-container-vier-pfoten{height: 450vw;}
+    .picture-container-underskinned{height: 420vw;}
+    .picture-container-jumpsuit{height: 580vw;}
+    .picture-container-vitra{height: 320vw;}
+
+    /* KONTAKTFORMULAR */
+
+    .contact {
+        background-size: 120vh;
+        background-position: 60%;
+    }
+
+    form {
+        gap: 4%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+    }  
+    
+    input {
+        margin: 0.5rem 0;
+    }
+    .input-fields {
+        height: 30rem;
+        width: 15rem;
+    }
+    #first-name, #last-name, #email, #phone, #theme {
+        height: 2.5rem;
+    }
+    .input-box {
+        height: 30rem;
+        margin-top: 3.5rem;
+        width: 20rem;
+        gap: 4%;
+    }
+    #message {
+        height: 15rem;
+        margin: 0;
+        padding-top: 0.8rem;
+    }
+    .radio-buttons {
+        width: 14rem;
+        gap: 5%;
+    }
+    button {
+        height: 3rem;
+        width: 8rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* 10.3 media query max-width 600px */
+@media (max-width: 600px) {
+    /* HOMEPAGE */
+    .home-pic1 {left: -5rem;}
+    .home-pic4 {height: 700px; left: 9rem; top: 40rem;} 
+    .homepage-second-section {margin-top: -15rem;}
+    .text-fotografie {width: 30rem;}
+
+
+    /* KONTAKTFORMULAR */
+    form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        position: relative;
+        top: 2rem;
+    
+    }
+    .input-box {
+        margin-top: 0;
+        width: 22rem;
+        height: 22rem;
+        gap: 0%;
+        -webkit-box-align: center;
+                align-items: center;
+    }
+    .input-fields {
+        width: 22rem;
+        height: 20rem;
+    }
+    #message {
+        height: 10rem;
+    }
+    .radio-buttons {
+        width: 22rem;
+        gap: 10%;
+        margin: 0;
+    }
+    input {
+        margin: 0;
+    }
+    .errorMessages {
+        margin-top: 0;
+    }
+
+}
+
+
+/* 10.4 media query max-width 500px */
+@media (max-width: 500px) {
+    /*NAVIGATION*/
+    .main-navigation {
+        width: 100vw;
+    }
+    .logo {
+        width: 100vw;
+        left: 20vw;
+    }
+    .dropdown-menu {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
+        min-height: 20vh;
+        padding-top: 4.5rem;
+    }
+    .burger-menu-content {
+        margin-top: 3rem;
+        background-color: #ffffffd8;
+    }
+    .burger-menu {
+        position: fixed;
+    }
+    .burger-menu-content li{
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+    }
+
+    /* HOMEPAGE */
+    .heropicture {
+        opacity: 50%;
+    }
+    .heropicture-container {
+        width: 100vw;
+    }
+    .heropicture-container h1 {
+        width: 100vw;
+    }
+    .text-fotografie, .text-über-mich {width: 25rem; font-size: 1.15rem;}
+
+    /* TITELSEITEN UND SLIDER */
+    .info {
+        right: 50%;
+        -webkit-transform: translate(50%);
+                transform: translate(50%);
+    }
+    .bottom-nav-container {
+        height: 23vh;
+    }
+    .title-4 {left: 4.3%;}
+    @-webkit-keyframes title-animation-4 {
+        0% {opacity: 0; left: 14%;}
+        100% {opacity: 100%; left: 4.3%;}
+    }
+    @keyframes title-animation-4 {
+        0% {opacity: 0; left: 14%;}
+        100% {opacity: 100%; left: 4.3%;}
+    }
+    .close-cover {
+        top: 17vh;
+        left: 80vw;
+    }
+
+    /* BILDER PLATZIERUNG AUF PROJEKTSEITEN */
+    /* vier pfoten und ein stethoskop */
+    .item-1-a {width: 50vw; top: 27vw; left: 5vw;}
+    .item-1-b {width: 50vw; top: -60vw; left: 45vw;}
+    .item-1-c {width: 45vw; top: -10vw; left: -45vw;}
+    .item-1-d {width: 60vw; top: 64vw; left: 30vw;}
+    .item-1-e {width: 45vw; top: 40vw; left: 8vw;}
+    .item-1-f {width: 35vw; top: -90vw; left: 10vw;}
+    .picture-container-vier-pfoten {height: 310vh;}
+    
+    /* underskinned */
+    .item-2-a {width: 40vw; top: 7vw; left: 5vw;}
+    .item-2-b {width: 45vw; top: 67vw; left: 10vw;}
+    .item-2-c {width: 60vw; top: 0vw; left: 5vw;}
+    .item-2-d {width: 70vw; top: 5vw; left: 20vw;}
+    .item-2-e {width: 40vw; top: -60vw; left: 3vw;}
+    .item-2-f {width: 50vw; top: -110vw; left: 6vw;}
+    .picture-container-underskinned{height: 320vh;}
+
+    /* jumpsuit */
+    .item-3-a {width: 30vw; top: 0vw; left: 4vw;}
+    .item-3-b {width: 40vw; top: 20vw; left: 10vw;}
+    .item-3-c {width: 40vw; top: 0vw; left: 7vw;}
+    .item-3-e {width: 30vw; top: 0vw; left: 25vw;}
+    .item-3-f {width: 30vw; top: 51vw; left: 2vw;}
+    .item-3-g {width: 35vw; top: 51vw; left: 2vw;}
+    .item-3-i {width: 30vw; top: 48vw; left: 2vw;}
+    .item-3-h {width: 50vw; top: -10vw; left: 25vw;}
+    .item-3-j {width: 30vw; top: 100vw; left: 2vw;}
+    .item-3-l {width: 40vw; top: 100vw; left: 10vw;}
+    .item-3-m {width: 50vw; top: 190vw; left: -40vw;}
+    .item-3-n {width: 30vw; top: 230vw; left: 4vw;}
+    .item-3-o {width: 30vw; top: 230vw; left: 4vw;}
+    .item-3-k {width: 30vw; top: 230vw; left: 4vw;}
+    .item-3-q {width: 30vw; top: 230vw; left: 4vw;}
+    .item-3-p {width: 30vw; top: 205vw; left: 4vw;}
+    .item-3-r {width: 30vw; top: 230vw; left: 4vw;}
+    .item-3-t {width: 30vw; top: 157.5vw; left: 35vw;}
+    .item-3-s {width: 55vw; top: 80vw; left: 14vw;}
+    .picture-container-jumpsuit{height: 460vh;}
+    
+    /* vitra */
+    .item-4-a {width: 40vw; top: 6vh; left: 51vw;}
+    .item-4-b {width: 42vw; top: 2vw; left: -30vw;}
+    .item-4-e {width: 80vw; top: 40vw; left: 10vw;}
+    .item-4-d {width: 42vw; top: 0vw; left: 5vw;}
+    .item-4-c {width: 40vw; top: 80vw; left: 7vw;}
+    .item-4-f {width: 30vw; top: 50vw; left: 2vw;}
+    .item-4-g {width: 65vw; top: 110vw; left: 3vw;}
+    .picture-container-vitra {height: 250vh;}
+
+
+    .alleBilder-container {
+        margin-top: 12rem;
+    }
+
+    .lightbox {
+        height: 100vh;
+    }
+    .lightbox img {
+        height: 50vh;
+        margin-top: 10rem;
+    }
+
+    .close-lightbox {
+        top: 20%;
+    }
+
+
+
+    /* KONTAKTFORMULAR */
+
+    form {
+        top: 6rem;
+        gap: 1%;
+    }
+    .input-box {
+        height: 18rem;
+    }
+    #message {
+        height: 7rem;
+    }
+    button {
+        height: 3rem;
+        width: 6rem;
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+
+/* 10.5 media query max-width 400px */
+@media (max-width: 400px) {
+    /* NAVIGATION */
+    .logo{
+        left: 15vw;
+    }
+    /* HOMEPAGE */
+    .home-pic4 {height: 500px; left: 5rem;} 
+    .text-fotografie, .text-über-mich {width: 20rem; font-size: 1rem;}
+
+    /* SLIDER */
+    .slideshow {
+        width: 80vw;
+    }
+    .slide {
+        width: 70vw;
+        margin-top: 5rem;
+    }
+    .slide ul {
+        -webkit-box-align: end;
+                align-items: flex-end;
+    }
+    .slide img {
+        width: 70vw;
+    }
+    .autoplay {
+        top: 70vw;
+    }
+    .left, .right {top: 4rem;}
+
+    .title-1 {font-size: 3rem;}
+    .title-2 {font-size: 5rem; width: 90vw; line-height: 20rem;}
+    .title-3 {font-size: 6rem; width: 80vw; line-height: 20rem;}
+    .title-4 {font-size: 5rem; letter-spacing: 2rem; width: 80vw; left: 2.2%;}
+
+    @-webkit-keyframes title-animation-2 {
+        0% {left: 7%;}
+        100% {left: 1.3%;}
+    }
+
+    @keyframes title-animation-2 {
+        0% {left: 7%;}
+        100% {left: 1.3%;}
+    }
+    @-webkit-keyframes title-animation-3 {
+        0% {opacity: 0; left: 8%;}
+        100% {opacity: 100%; left: 2.5%;}
+    }
+    @keyframes title-animation-3 {
+        0% {opacity: 0; left: 8%;}
+        100% {opacity: 100%; left: 2.5%;}
+    }
+    @-webkit-keyframes title-animation-4 {
+        0% {opacity: 0; left: 8%;}
+        100% {opacity: 100%; left: 2.2%;}
+    }
+    @keyframes title-animation-4 {
+        0% {opacity: 0; left: 8%;}
+        100% {opacity: 100%; left: 2.2%;}
+    }
+
+    /* TITELSEITEN */
+    .cover-title {margin-top: 5rem;}
+    .title-underskinned {font-size: 5rem; line-height: 20rem; width: 100vw;}
+    .title-jumpsuit {font-size: 6rem; line-height: 20rem; width: 40vw;}
+    .title-vitra {font-size: 5rem;}
+
+    @-webkit-keyframes title-movement-2 {
+        0% {left: 7%; letter-spacing: 1.8vw; width: 90vw; opacity: 100%; }
+        100% {left: 2%; letter-spacing: 0; width: 80vw; opacity: 60%; }
+    }
+
+    @keyframes title-movement-2 {
+        0% {left: 7%; letter-spacing: 1.8vw; width: 90vw; opacity: 100%; }
+        100% {left: 2%; letter-spacing: 0; width: 80vw; opacity: 60%; }
+    }
+    @-webkit-keyframes title-movement-3 {
+        0% {left: 15%; letter-spacing: 1.8vw; width: 40vw;}
+        100% {left: 2%; letter-spacing: 0; width: 20vw;}
+    }
+    @keyframes title-movement-3 {
+        0% {left: 15%; letter-spacing: 1.8vw; width: 40vw;}
+        100% {left: 2%; letter-spacing: 0; width: 20vw;}
+    }
+
+    /* PROJEKTSEITEN */
+    .picture-container-jumpsuit {
+        height: 810vw;
+    }
+    .picture-container-vitra {
+        height: 430vw;
+    }
+    .picture-container-vier-pfoten {
+        height: 570vw;
+    }
+    .picture-container-underskinned {
+        height: 620vw;
+    }
+
+    /* LIGHTBOX */
+    .lightbox img {
+        width: 90vw;
+        height: auto;
+    }
+
+
+
+    /* KONTAKTFORMULAR */
+
+    form {
+        top: 5rem;
+    }
+    .radio-buttons {
+        font-size: 1rem;
+    }
+    #checkbox {
+        padding: 0.1rem;
+    }
+    .input-fields {
+        height: 14rem;
+    }
+    #first-name, #last-name, #email, #phone, #theme {
+        height: 2rem;
+    }
+}
