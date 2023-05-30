@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi! Ich bin eine Fotografin und in diesem Portfolio werden einige meiner Arbeiten gezeigt.">
+    <title>Portfolio Sara Niederer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bjh1npe.css">
+   
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="code-min.js"></script>
+
+</head>
+<body id="contact-body">
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-navigation dark">
+        <div class="logo"><a href="index.html">sara niederer</a></div>
+        <ul>
+            <li><a href="00_Projektübersicht.html">alle projekte</a></li>
+            <li><a href="05_alleBilder.html">alle bilder</a></li>
+            <li><a href="00_Kontaktformular.html">kontakt</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- BURGER MENU -->
+    <div class="dropdown-menu dark">
+        <div class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="burger-menu-content">
+            <ul class="hidden">
+                <li><a href="00_Projektübersicht.html">alle projekte</a></li>
+                <li><a href="05_alleBilder.html">alle bilder</a></li>
+                <li><a href="00_Kontaktformular.html">kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- KONTAKTFORMULAR -->
+    <section class="contact">
+
+        <form>
+
+
+            <!-- LINKE SPALTE VON FORMULAR -->
+           <div class="input-fields">
+
+                <!-- button mit auflistung -->
+                <label for="theme"></label>
+                <select name="theme" id="theme">
+                <option value="question">ich habe eine frage</option>
+                <option value="feedback">ich will ein feedback geben</option>
+                <option value="request">ich habe eine buchungsanfrage</option>
+                <option value="sth-else">ich habe etwas anderes</option>
+                </select>
+
+                <!-- radio buttons mit geschlechterwahl -->
+                <div class="radio-buttons">
+                    <div class="radio-button-female">
+                        <input type="radio" id="female" name="gender" value="weiblich">
+                        <label for="female">frau</label>
+                    </div>
+                    <div class="radio-button-male">
+                        <input type="radio" id="male" name="gender" value="männlich">
+                        <label for="male">herr</label>
+                    </div>
+                </div>
+
+                <!-- gewöhnliche eingabefelder -->
+               <input type="text" id="first-name" placeholder="vorname"> 
+               <input type="text" id="last-name" placeholder="nachname">
+               <input type="email" id="email" placeholder="email-adresse">
+               <input type="tel" id="phone" placeholder="telefon-nummer (optional)">
+           </div> 
+
+
+
+
+
+
+
+           <!-- RECHTE SPALTE VON FORMULAR -->
+           <div class="input-box">
+
+               <!-- checkbox zum fragen beantworten -->
+               <div id="checkbox">
+                   <div class="checkbox-question-1">
+                       <input type="checkbox" id="question1" name="question1" value="question">
+                       <label for="question1">ich habe die email adresse überprüft</label>
+                   </div>
+                   <div class="checkbox-question-2">
+                       <input type="checkbox" id="question2" name="question2" value="question">
+                       <label for="question2">ich habe die telefon nummer überprüft</label>
+                   </div>
+               </div>
+
+               <!-- nachricht -->
+               <textarea name="message" id="message" cols="30" rows="15" placeholder="bitte fügen sie ihre nachricht hier ein"></textarea>
+
+               <button type="submit">absenden</button>
+            </div>
+            
+
+
+            
+            
+        </form>
+    </section>
+    
+</body>
+</html>
